@@ -1,6 +1,6 @@
-# helloworld
+# GraphQL TodoApp
 
-> My grand Nuxt.js project
+> An example of using nuxt.js with apollo-server-express
 
 ## Build Setup
 
