@@ -1,0 +1,42 @@
+{
+  "name": "TodoApp",
+  "version": "1.0.0",
+  "description": "My grand Nuxt.js project",
+  "author": "kmsheng",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server --exec babel-node",
+    "build": "nuxt build && npm run build-server",
+    "build-server": "babel server -d server-dist",
+    "start": "cross-env NODE_ENV=production node server-dist/index.js",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "@nuxtjs/apollo": "^4.0.0-rc2.3",
+    "apollo-server-express": "^2.3.1",
+    "cross-env": "^5.2.0",
+    "dataloader": "^1.4.0",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "graphql": "^14.0.2",
+    "graphql-tag": "^2.10.0",
+    "helmet": "^3.15.0",
+    "lodash.get": "^4.4.2",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
+    "@babel/plugin-proposal-decorators": "^7.2.3",
+    "babel-eslint": "^8.2.1",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.0.1",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-vue": "^4.0.0",
+    "nodemon": "^1.11.0"
+  }
+}
